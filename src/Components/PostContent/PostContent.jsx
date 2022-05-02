@@ -12,6 +12,9 @@ const PostContent = () => {
   const { postDispatch } = usePosts();
 
   const submitHandler = async () => {
+    if(postData.content === ""){
+     return alert("Please Add Something in the input field")
+    }
     try {
       const data = await createPost(postData);
       await postDispatch({ type: "CREATE_POST", payload: data.posts }); 
