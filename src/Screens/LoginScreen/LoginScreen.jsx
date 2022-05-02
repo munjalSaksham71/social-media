@@ -6,8 +6,14 @@ import { useAuth } from '../../context/auth-context';
 const LoginScreen = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const { user, loginUser } = useAuth();
+    const { isUserLoggedIn, loginUser } = useAuth();
     const navigate = useNavigate()
+
+    useEffect(() => {
+      if(isUserLoggedIn) {
+        navigate("/")
+      }
+    }, [isUserLoggedIn])
 
     const submitHandler = async (e) => {
         e.preventDefault();

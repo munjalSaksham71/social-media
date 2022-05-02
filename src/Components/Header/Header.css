@@ -14,3 +14,8 @@
     position: fixed;
     width: 97%;
 }
+
+.big-font {
+    font-size: x-large;
+    font-weight: 500;
+}
