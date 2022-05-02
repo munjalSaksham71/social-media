@@ -7,7 +7,9 @@
 .title {
     font-weight: 600;
     font-size: x-large;
-    color: var(--bg-black);
+    color: #000;
+    position: fixed;
+    margin-left: 3rem;
 }
 
 .header{
@@ -18,4 +20,31 @@
 .big-font {
     font-size: x-large;
     font-weight: 500;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.hamburger-icons {
+    height: 2rem;
+    width: 2rem;
+}
+
+.hamburger-content {
+    width: 100vw;    
+    height: 138vh;    
+    justify-content: center;    
+    align-items: center;     
+    display: flex;    
+}
+
+@media screen and (max-width: 1000px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .avatar{ 
+        display: none;
+    }
 }
