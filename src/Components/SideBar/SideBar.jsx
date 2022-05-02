@@ -1,6 +1,6 @@
 import Card from '../Card/Card';
 import './SideBar.css';
-import { AiOutlineHome, BsPeople, AiOutlineLike, CgProfile, RiUserFollowLine } from '../Icon'
+import { AiOutlineHome, BsPeople, AiOutlineLike, CgProfile, RiUserFollowLine, BsBookmarks } from '../Icon'
 import { NavLink } from 'react-router-dom';
 
 const links = [
@@ -18,18 +18,24 @@ const links = [
     },
     {
         id: 3,
-        name: 'Liked Videos', 
+        name: 'Likes', 
         sidebarIcon: <AiOutlineLike />,
         linkTo: "/likes"
     },
     {
         id: 4,
+        name: 'Bookmark', 
+        sidebarIcon: <BsBookmarks />,
+        linkTo: "/bookmarks"
+    },
+    {
+        id: 5,
         name: 'Followers', 
         sidebarIcon: <RiUserFollowLine />,
         linkTo: "/followers"
     },
     {
-        id: 5,
+        id: 6,
         name: 'Profile', 
         sidebarIcon: <CgProfile />,
         linkTo: "/profile"
@@ -44,7 +50,7 @@ const SideBar = () => {
                     const { id, linkTo, sidebarIcon, name } = link;
                     return <div key={id}>
                         <NavLink to={linkTo} className="flex-row sidebar_item link-item" >{sidebarIcon} {name}</NavLink>
-                        <div className={id !== links.length ? "line": "" }></div>
+                        <div className={id !== links.length ? "line" : "" }></div>
                     </div>
                     })}
             </div>

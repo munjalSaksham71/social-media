@@ -1,0 +1,27 @@
+
+.align-post {
+    align-items: center;
+}
+
+.post-content {
+    width: 70%;
+    background-color: var(--white);
+    margin-top: 3rem;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.avatar_img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 10px;
+}
+
+.icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
