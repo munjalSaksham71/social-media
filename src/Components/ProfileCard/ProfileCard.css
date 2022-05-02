@@ -1,0 +1,21 @@
+.avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 10px;
+}
+
+.profile_info {
+    margin-left: 14px;
+}
+
+.avatar_img {
+    margin-top: 6px;
+}
+
+.align-card {
+    margin-right: 4.75rem;
+}
+
+.profile_name {
+    margin-bottom: 6px;
+}
