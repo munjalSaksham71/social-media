@@ -3,10 +3,15 @@
     background-color: #fff;
     margin-left: 4.75rem;
     margin-top: 2.5rem;
+    width: 17rem;
 }
 
 .card-content {
     padding: 12px 6px;
+}
+
+.fixed {
+    position: fixed;
 }
 
 @media only screen  and (max-width:1000px){

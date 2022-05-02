@@ -22,7 +22,7 @@ const HomeScreen = () => {
   const renderposts = [...postState.posts].reverse();
 
   return (
-    <div className="flex-row">
+    <div className="flex-row content-align">
       <div className="flex-column">
         <ProfileCard />
         <SideBar />

@@ -9,3 +9,8 @@
     font-size: x-large;
     color: #000;
 }
+
+.header{
+    position: fixed;
+    width: 97%;
+}

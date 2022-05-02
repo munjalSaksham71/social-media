@@ -44,6 +44,7 @@ const links = [
 
 const SideBar = () => {
     return (
+        <div className="card-top">
         <Card>
             <div className="flex-column">
                 {links.map((link) => {
@@ -55,6 +56,7 @@ const SideBar = () => {
                     })}
             </div>
         </Card>
+        </div>
     )
 }
 
