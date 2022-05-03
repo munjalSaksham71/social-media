@@ -18,7 +18,6 @@ const HomeScreen = () => {
 
   const { postState, postDispatch } = usePosts();
 
-  console.log(postState);
   const renderposts = [...postState.posts].reverse();
 
   return (
