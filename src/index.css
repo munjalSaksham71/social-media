@@ -1,4 +1,5 @@
 @import url("https://regalUI.netlify.app/styles.css");
+@import url(../node_modules/mockman-js/dist/style.css);
 
 body {
   margin: 0;
@@ -7,6 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e4dede;
 }
 
 code {

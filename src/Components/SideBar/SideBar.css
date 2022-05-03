@@ -1,0 +1,23 @@
+.sidebar_item {
+    margin-top: 1rem;
+    margin-left: 12px;
+    gap: 15px;
+}
+
+.card-top {
+    margin-top: 6rem;
+}
+
+.line {
+    margin: 10px 0px;
+    border-top: 1px solid #000;
+}
+
+.link-item {
+    text-decoration: none;
+    color: #000;
+}
+
+.link-item:hover {
+    cursor: pointer;
+}

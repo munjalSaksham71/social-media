@@ -7,5 +7,15 @@
 .title {
     font-weight: 600;
     font-size: x-large;
-    color: #000;
+    color: var(--bg-black);
+}
+
+.header{
+    position: fixed;
+    width: 97%;
+}
+
+.big-font {
+    font-size: x-large;
+    font-weight: 500;
 }

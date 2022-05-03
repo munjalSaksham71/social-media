@@ -8,8 +8,14 @@ const SignupScreen = () => {
     const [password, setPassword] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const { user, signupUser } = useAuth();
+    const { isUserLoggedIn, signupUser } = useAuth();
     const navigate = useNavigate();
+
+    useEffect(() => {
+      if(isUserLoggedIn) {
+        navigate("/")
+      }
+    }, [isUserLoggedIn])
 
     const submitHandler = async (e) => {
         e.preventDefault();

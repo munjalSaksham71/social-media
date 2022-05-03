@@ -1,0 +1,11 @@
+.post-field {
+    padding: 6px 12px;
+    width: 25rem;
+    background-color: var(--white);
+    border: none;
+    height: 2rem;
+}
+
+.input-field{
+    gap: 10px;
+}
