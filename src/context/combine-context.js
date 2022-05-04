@@ -1,10 +1,13 @@
 import { AuthContextProvider } from "./auth-context";
+import { FollowerContextProvider } from "./follower-context";
 import { PostContextProvider } from "./posts-context";
 
 const CombineContext = ({ children }) => {
   return (
     <AuthContextProvider>
-      <PostContextProvider>{children}</PostContextProvider>
+      <PostContextProvider>
+        <FollowerContextProvider>{children}</FollowerContextProvider>
+      </PostContextProvider>
     </AuthContextProvider>
   );
 };
