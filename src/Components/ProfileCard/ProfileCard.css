@@ -23,5 +23,6 @@
 .profile-summary {
     position: fixed;
     margin-top: 3.4rem;
-    gap: 10px;
+    gap: 16px;
+    margin-left: 2rem;
 }
