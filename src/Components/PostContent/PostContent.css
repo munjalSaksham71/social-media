@@ -9,3 +9,9 @@
 .input-field{
     gap: 10px;
 }
+
+@media only screen and (max-width: 542px) {
+    .post-field {
+        width: 16rem;
+    }
+}

@@ -1,0 +1,14 @@
+.hamburger {
+    display: block;
+    position: fixed;
+    width: 30%; 
+    margin-top: -22rem;    
+    margin-left: -5rem;
+}
+
+.list_item {
+    text-decoration: none;
+    color: var(--primary);
+    gap: 10px;
+    font-size: larger;
+}
