@@ -31,6 +31,10 @@
     width: 2rem;
 }
 
+.text-style {
+    text-decoration: none;
+}
+
 .hamburger-content {
     width: 100vw;    
     height: 138vh;    
@@ -42,6 +46,7 @@
 @media screen and (max-width: 1000px) {
     .hamburger-menu {
         display: block;
+        margin-top: 8px;
     }
 
     .avatar{ 

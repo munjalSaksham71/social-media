@@ -25,7 +25,7 @@ const Header = () => {
           </div>
         )}
       </div>
-      <h1 className="title">Airpark</h1>
+      <Link to="/" className="title text-style">Airpark</Link>
       <div className="avatar mr-5">
         <div className="big-font">
           {isUserLoggedIn ? (
