@@ -1,14 +1,12 @@
 import axios from "axios";
 
-const config = {
-  headers: {
-    authorization: localStorage.getItem("user_token"),
-  },
-};
-
 export const getPosts = async () => {
   try {
-    const { data } = await axios.get("/api/posts");
+    const { data } = await axios.get("/api/posts", {
+      headers: {
+        authorization: localStorage.getItem("user_token"),
+      },
+    });
     return data;
   } catch (error) {
     console.error(error);
@@ -17,9 +15,17 @@ export const getPosts = async () => {
 
 export const createPost = async (postData) => {
   try {
-    const { data } = await axios.post("/api/posts", { postData }, config);
+    const { data } = await axios.post(
+      "/api/posts",
+      { postData },
+      {
+        headers: {
+          authorization: localStorage.getItem("user_token"),
+        },
+      }
+    );
     return data;
   } catch (error) {
-      console.error(error);
+    console.error(error);
   }
 };
