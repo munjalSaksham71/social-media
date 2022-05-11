@@ -1,0 +1,18 @@
+.form {
+    width: 70%;
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.field-input {
+    width: 10rem;
+    padding: 10px;
+}
+
+.preview-image {
+    height: 10rem;
+    width: 10rem;
+    justify-content: center;
+    align-items: center;
+}
