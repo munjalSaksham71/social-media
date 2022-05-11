@@ -3,13 +3,14 @@ import { deletePost, getPostsFromUser } from "../../actions/postsAction";
 import ProfileCard from "../../Components/ProfileCard/ProfileCard";
 import SideBar from "../../Components/SideBar/SideBar";
 import { useAuth } from "../../context/auth-context";
-import { AiOutlineLike, FaTrash } from "../../Components/Icon";
+import { AiOutlineLike, FaTrash, AiFillLike } from "../../Components/Icon";
 import "./UserProfileScreen.css";
 import { Link } from "react-router-dom";
+import { dislikePost, likePost } from "../../actions/likesAction";
+import { usePosts } from "../../context/posts-context";
 
 const UserProfileScreen = () => {
   const [posts, setMyPosts] = useState([]);
-
   const { userData } = useAuth();
 
   useEffect(() => {
@@ -65,15 +66,12 @@ const UserProfileScreen = () => {
                   alt="Profile Picture"
                 />
                 <div className="ml-2 mt-1">{post.username}</div>
-              </div>
-              <div className="m-2">{post.content}</div>
-              <div className="flex-row ml-2">
-                <AiOutlineLike className="icon" />
                 <FaTrash
                   onClick={() => deleteHandler(post._id)}
-                  className="icon ml-2"
+                  className="icon ml-auto mr-3"
                 />
               </div>
+              <div className="m-2">{post.content}</div>
               <hr className="mb-2 mt-2" />
             </div>
           ))}
