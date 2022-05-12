@@ -3,3 +3,6 @@ export { LoginScreen } from "./LoginScreen/LoginScreen";
 export { SignupScreen } from "./SignupScreen/SignupScreen";
 export { UserScreen } from "./UserScreen/UserScreen";
 export { BookmarksScreen } from "./BookmarksScreen/BookmarksScreen";
+export { UserProfileScreen } from "./UserProfileScreen/UserProfileScreen";
+export { UserProfileUpdate } from "./UserProfileUpdate/UserProfileUpdate";
+

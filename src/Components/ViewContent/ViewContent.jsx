@@ -35,8 +35,6 @@ const ViewContent = ({ posts }) => {
     bookmarkDispatch({ type: "REMOVE_FROM_BOOKMARKS", payload: bookmarks });
   }
 
-  console.log(bookmarks);
-
   return (
     <div className="flex-column align-post">
       {posts.map((post) => {

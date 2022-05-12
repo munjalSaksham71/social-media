@@ -14,7 +14,7 @@ export const likePost = async (id) => {
     );
     return data
   } catch (error) {
-    console.error(error);
+    console.error(error.response);
   }
 };
 
@@ -32,7 +32,7 @@ export const dislikePost = async (id) => {
     );
     return data
   } catch (error) {
-    console.error(error);
+    console.error(error.response);
   }
 };
   

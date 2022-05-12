@@ -58,6 +58,9 @@ export function makeServer({ environment = "development" } = {}) {
       this.post("/auth/signup", signupHandler.bind(this));
       this.post("/auth/login", loginHandler.bind(this));
 
+      // Cloudinary
+      this.passthrough('https://api.Cloudinary.com/v1_1/***'),
+
       // post routes (public)
       this.get("/posts", getAllpostsHandler.bind(this));
       this.get("/posts/:postId", getPostHandler.bind(this));

@@ -1,0 +1,26 @@
+.profile-image {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+}
+
+.user-content {
+  width: 60%;
+  margin-left: 23rem;
+  margin-top: 6rem;
+  background: var(--white);
+  padding: 10px;
+}
+
+.edit-btn {
+  margin-top: 2rem;
+  margin-right: 2rem;
+  height: 1.5rem;
+  width: 5rem;
+}
+
+.image-avatar {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}

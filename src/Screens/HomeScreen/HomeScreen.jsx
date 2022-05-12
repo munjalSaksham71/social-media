@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { getPosts } from "../../actions/postsAction";
-import Hamburger from "../../Components/Hamburger/Hamburger";
 import PostContent from "../../Components/PostContent/PostContent";
 import ProfileCard from "../../Components/ProfileCard/ProfileCard";
 import SideBar from "../../Components/SideBar/SideBar";
