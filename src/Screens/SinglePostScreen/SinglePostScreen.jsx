@@ -14,7 +14,8 @@ import {
 } from "../../actions/commentActions";
 import { useComments } from "../../context/postComments-context";
 import jwt_decode from "jwt-decode";
-import { comment } from "postcss";
+import { usePosts } from "../../context/posts-context";
+import { dislikePost, likePost } from "../../actions/likesAction";
 
 const SinglePostScreen = () => {
   const { postId } = useParams();
@@ -26,6 +27,8 @@ const SinglePostScreen = () => {
     commentsState: { comments },
     commentsDispatch,
   } = useComments();
+
+  const { postDispatch } = usePosts();
 
   useEffect(() => {
     (async () => {
@@ -71,12 +74,15 @@ const SinglePostScreen = () => {
 
   const deleteCommentHandler = async (commentId) => {
     try {
-      const {data} = await deleteCommentFromPost(postId, commentId);
-      commentsDispatch({ type: "REMOVE_FROM_COMMENTS", payload: data.comments });
+      const { data } = await deleteCommentFromPost(postId, commentId);
+      commentsDispatch({
+        type: "REMOVE_FROM_COMMENTS",
+        payload: data.comments,
+      });
     } catch (error) {
       console.error(error);
     }
-  }
+  };
 
   return (
     <div className="flex-row content-align">
@@ -95,7 +101,6 @@ const SinglePostScreen = () => {
             </div>
           </div>
           <div className="post-author pl-2">{post?.content}</div>
-          <AiOutlineLike className="icon ml-2 mt-3" />
         </div>
         {/* Comment Section */}
         <div>
@@ -123,7 +128,10 @@ const SinglePostScreen = () => {
                     )}
                   </div>
                   {comment.username === user.username && (
-                    <FaTrash onClick={() => deleteCommentHandler(comment._id)} className="icon ml-auto mr-3" />
+                    <FaTrash
+                      onClick={() => deleteCommentHandler(comment._id)}
+                      className="icon ml-auto mr-3"
+                    />
                   )}
                 </div>
               </div>
