@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import {LoginScreen, SignupScreen, HomeScreen, UserScreen, BookmarksScreen, UserProfileScreen, UserProfileUpdate} from "./Screens/index";
+import {LoginScreen, SignupScreen, HomeScreen, UserScreen, BookmarksScreen, UserProfileScreen, UserProfileUpdate, SinglePostScreen} from "./Screens/index";
 import MockMan from "mockman-js";
 import Header from "./Components/Header/Header";
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute'
@@ -11,6 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<PrivateRoute><HomeScreen /></PrivateRoute>} />
+        <Route path="/post/:postId" element={<PrivateRoute><SinglePostScreen /></PrivateRoute>} />
         <Route path="/users" element={<PrivateRoute><UserScreen /></PrivateRoute>} />
         <Route path="/bookmarks" element={<PrivateRoute><BookmarksScreen /></PrivateRoute>} />
         <Route path="/profile" element={<PrivateRoute><UserProfileScreen /></PrivateRoute>} />

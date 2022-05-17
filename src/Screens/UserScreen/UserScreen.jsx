@@ -45,7 +45,7 @@ const UserScreen = () => {
           return (
             <div key={user._id} className="profile-card flex-column">
               <div className="flex-row">
-                <img src="./images/img_avatar.png" className="profile-avatar" />
+                <img src={user.imageUrl} className="profile-avatar" />
                 <div className="ml-1 flex-column">
                   <div>{`${user.firstName} ${user.lastName}`}</div>
                   <div>{`@${user.username}`}</div>

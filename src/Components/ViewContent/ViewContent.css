@@ -25,3 +25,8 @@
 .icon:hover {
     cursor: pointer;
 }
+
+.text-none {
+    text-decoration: none;
+    color: var(--bg-black);
+}

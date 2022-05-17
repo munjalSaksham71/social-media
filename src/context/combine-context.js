@@ -1,6 +1,7 @@
 import { AuthContextProvider } from "./auth-context";
 import { BookmarkContextProvider } from "./bookmark-context";
 import { FollowerContextProvider } from "./follower-context";
+import { CommentContextProvider } from "./postComments-context";
 import { PostContextProvider } from "./posts-context";
 
 const CombineContext = ({ children }) => {
@@ -8,7 +9,9 @@ const CombineContext = ({ children }) => {
     <AuthContextProvider>
       <PostContextProvider>
         <FollowerContextProvider>
-          <BookmarkContextProvider>{children}</BookmarkContextProvider>
+          <BookmarkContextProvider>
+            <CommentContextProvider>{children}</CommentContextProvider>
+          </BookmarkContextProvider>
         </FollowerContextProvider>
       </PostContextProvider>
     </AuthContextProvider>

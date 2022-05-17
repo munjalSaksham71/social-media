@@ -9,7 +9,7 @@ import { BsPeople, BsLink45Deg, BsBookmarks, BsFillBookmarksFill } from "react-i
 import { CgProfile } from "react-icons/cg";
 import { RiUserFollowLine } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { FaTimes, FaTrash } from "react-icons/fa";
+import { FaTimes, FaTrash, FaRegComment } from "react-icons/fa";
 
 export {
   AiOutlineHome,
@@ -25,5 +25,6 @@ export {
   RiUserFollowLine,
   GiHamburgerMenu,
   FaTimes,
-  FaTrash
+  FaTrash, 
+  FaRegComment
 };
