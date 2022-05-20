@@ -10,6 +10,7 @@ import { CgProfile } from "react-icons/cg";
 import { RiUserFollowLine } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaTimes, FaTrash, FaRegComment } from "react-icons/fa";
+import { MdOutlineExplore } from 'react-icons/md'
 
 export {
   AiOutlineHome,
@@ -26,5 +27,6 @@ export {
   GiHamburgerMenu,
   FaTimes,
   FaTrash, 
-  FaRegComment
+  FaRegComment, 
+  MdOutlineExplore
 };

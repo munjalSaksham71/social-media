@@ -23,11 +23,12 @@ const AuthContextProvider = ({ children }) => {
     }
   };
 
-  const signupUser = async (username, password, firstName, lastName) => {
-    const { data } = await signup(username, password, firstName, lastName);
+  const signupUser = async (username, password, firstName, lastName, imageUrl) => {
+    console.log(imageUrl);
+    const { data } = await signup(username, password, firstName, lastName, imageUrl);
       localStorage.setItem("user_token", JSON.stringify(data.encodedToken));
       localStorage.setItem("userData", JSON.stringify(data.foundUser));
-      setUserData(data.foundUser);
+      setUserData(data.createdUser);
       setUser(data.encodedToken);
       setIsUserLoggedIn(true);
   }

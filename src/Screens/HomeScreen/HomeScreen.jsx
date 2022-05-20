@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { getPosts } from "../../actions/postsAction";
+import Filters from "../../Components/Filters/Filters";
 import PostContent from "../../Components/PostContent/PostContent";
 import ProfileCard from "../../Components/ProfileCard/ProfileCard";
 import SideBar from "../../Components/SideBar/SideBar";
@@ -29,6 +30,9 @@ const HomeScreen = () => {
       <div className="flex-column main-content">
         <PostContent />
         <ViewContent posts={renderposts} />
+      </div>
+      <div className="filter-sidebar">
+        <Filters />
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import "./ProfileCard.css";
 
 const ProfileCard = () => {
 
-  const {userData} = useAuth();
+  const { userData } = useAuth();
 
   const {
     followState: { following, followers }, 
@@ -27,12 +27,12 @@ const ProfileCard = () => {
       <div className="flex-row mb-5 align-card">
         <img
           className="avatar avatar_img"
-          src={userData.imageUrl}
+          src={userData?.imageUrl}
           alt="image-avatar"
         />
         <div className="flex-column profile_info">
-          <div className="profile_name">{`${userData.firstName} ${userData.lastName} `}</div>
-          <div className="profile_username">{userData.username}</div>
+          <div className="profile_name">{`${userData?.firstName} ${userData?.lastName} `}</div>
+          <div className="profile_username">{userData?.username}</div>
         </div>
         <div className="flex-row profile-summary">
           <div className="profile-following">

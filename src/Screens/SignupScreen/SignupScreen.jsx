@@ -17,13 +17,15 @@ const SignupScreen = () => {
       }
     }, [isUserLoggedIn])
 
+    const imageUrl = "https://res.cloudinary.com/dniz23rju/image/upload/v1647158103/sample.jpg";
+
     const submitHandler = async (e) => {
         e.preventDefault();
         if(!username || !password || !firstName || !lastName ){
             alert("Please enter All the fields");
         }
         try {
-            await signupUser(username, password, firstName, lastName);
+            await signupUser(username, password, firstName, lastName, imageUrl);
         } catch (error) {
             console.error(error.message)
         }
