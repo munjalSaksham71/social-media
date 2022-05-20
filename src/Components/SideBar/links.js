@@ -1,9 +1,8 @@
 import {
   AiOutlineHome,
   BsPeople,
-  AiOutlineLike,
   CgProfile,
-  RiUserFollowLine,
+  MdOutlineExplore,
   BsBookmarks,
 } from "../Icon";
 
@@ -16,21 +15,21 @@ export const links = [
   },
   {
     id: 2,
+    name: "Explore",
+    sidebarIcon: <MdOutlineExplore />,
+    linkTo: "/explore",
+  },
+  {
+    id: 3,
     name: "People",
     sidebarIcon: <BsPeople />,
     linkTo: "/users",
   },
   {
-    id: 3,
+    id: 4,
     name: "Bookmark",
     sidebarIcon: <BsBookmarks />,
     linkTo: "/bookmarks",
-  },
-  {
-    id: 4,
-    name: "Followers",
-    sidebarIcon: <RiUserFollowLine />,
-    linkTo: "/followers",
   },
   {
     id: 5,

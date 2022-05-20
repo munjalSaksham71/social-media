@@ -19,7 +19,7 @@ export const login = async (username, password) => {
   }
 };
 
-export const signup = async (username, password, firstName, lastName) => {
+export const signup = async (username, password, firstName, lastName, imageUrl) => {
   try {
     const data = await axios.post(
       "/api/auth/signup",
@@ -28,6 +28,7 @@ export const signup = async (username, password, firstName, lastName) => {
         password,
         firstName,
         lastName,
+        imageUrl
       },
       config
     );

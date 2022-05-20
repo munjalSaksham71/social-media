@@ -2,12 +2,18 @@
   width: 60%;
   align-items: center;
   margin-left: 22rem;
-  margin-top: 6rem;
+  margin-top: 0rem;
 }
 
 .content-align {
-  padding-top: 5rem;
+  padding-top: 6rem;
 }
+
+.filter-sidebar {
+  margin-top: 4rem;
+  margin-left: -10rem;
+}
+
 
 @media only screen and (max-width: 1000px) {
     .main-content {

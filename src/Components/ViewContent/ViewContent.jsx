@@ -1,18 +1,32 @@
 import "./ViewContent.css";
-import { AiOutlineLike, AiFillLike, BsBookmarks, BsFillBookmarksFill, FaRegComment } from "../Icon";
+import {
+  AiOutlineLike,
+  AiFillLike,
+  BsBookmarks,
+  BsFillBookmarksFill,
+  FaRegComment,
+} from "../Icon";
 import { dislikePost, likePost } from "../../actions/likesAction";
 import jwt_decode from "jwt-decode";
 import { usePosts } from "../../context/posts-context";
-import { addToBookmark, removeFromBookmark } from "../../actions/bookmarkActions";
+import {
+  addToBookmark,
+  removeFromBookmark,
+} from "../../actions/bookmarkActions";
 import { useBookmarks } from "../../context/bookmark-context";
 import { Link } from "react-router-dom";
+import { useFilters } from "../../context/filter-context";
 
 const ViewContent = ({ posts }) => {
   const { postDispatch } = usePosts();
   const {
     bookmarkState: { bookmarks },
-    bookmarkDispatch
+    bookmarkDispatch,
   } = useBookmarks();
+
+  const {
+    filterState: { sortByDate, sortByLatestPosts, sortByTrendingPost },
+  } = useFilters();
 
   const user = jwt_decode(localStorage.getItem("user_token"));
 
@@ -27,18 +41,46 @@ const ViewContent = ({ posts }) => {
   };
 
   const addToBookmarksHandler = async (id) => {
-    const {bookmarks} = await addToBookmark(id);
+    const { bookmarks } = await addToBookmark(id);
     bookmarkDispatch({ type: "ADD_TO_BOOKMARKS", payload: bookmarks });
   };
 
   const removeFromBookmarkHandler = async (id) => {
-    const {bookmarks} = await removeFromBookmark(id);
+    const { bookmarks } = await removeFromBookmark(id);
     bookmarkDispatch({ type: "REMOVE_FROM_BOOKMARKS", payload: bookmarks });
-  }
+  };
+
+  const filterPosts = () => {
+    let filteredPosts = posts;
+
+    if (sortByDate) {
+      filteredPosts = filteredPosts.sort((a, b) =>
+        sortByDate === "LOW_TO_HIGH"
+          ? a.createdAt.localeCompare(b.createdAt)
+          : b.createdAt.localeCompare(a.createdAt)
+      );
+    }
+
+    if (sortByLatestPosts) {
+      filteredPosts = filteredPosts.sort((a,b) =>
+        b.createdAt.localeCompare(a.createdAt)
+      );
+    }
+
+    if (sortByTrendingPost) {
+      filteredPosts = filteredPosts.sort(
+        (a, b) => b.likes.likeCount - a.likes.likeCount
+      );
+    }
+
+    return filteredPosts;
+  };
+
+  const filteredPostsList = filterPosts();
 
   return (
     <div className="flex-column align-post">
-      {posts.map((post) => {
+      {filteredPostsList.map((post) => {
         return (
           <div key={post._id} className="post-content">
             <div className="flex-row mb-2">
@@ -76,9 +118,10 @@ const ViewContent = ({ posts }) => {
               </div>
               <div>
                 {bookmarks.some((bookmark) => bookmark._id === post._id) ? (
-                  <BsFillBookmarksFill 
-                  onClick={() => removeFromBookmarkHandler(post._id)}
-                  className="icon ml-2" />
+                  <BsFillBookmarksFill
+                    onClick={() => removeFromBookmarkHandler(post._id)}
+                    className="icon ml-2"
+                  />
                 ) : (
                   <BsBookmarks
                     onClick={() => addToBookmarksHandler(post._id)}
