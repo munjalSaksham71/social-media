@@ -39,7 +39,7 @@ const SignupScreen = () => {
           First Name: 
         </label>
         <input
-          className="mt-1 p-1"
+          className="mt-1 p-1 field"
           type="text"
           placeholder="Enter your first name"
           value={firstName}
@@ -49,7 +49,7 @@ const SignupScreen = () => {
           Last Name: 
         </label>
         <input
-          className="mt-1 p-1"
+          className="mt-1 p-1 field"
           type="text"
           placeholder="Enter your last name"
           value={lastName}
@@ -59,7 +59,7 @@ const SignupScreen = () => {
           Username
         </label>
         <input
-          className="mt-1 p-1"
+          className="mt-1 p-1 field"
           type="text"
           placeholder="Enter your username"
           value={username}
@@ -69,7 +69,7 @@ const SignupScreen = () => {
           Password
         </label>
         <input
-          className="mt-1 p-1"
+          className="mt-1 p-1 field"
           type="password"
           placeholder="Enter your password"
           value={password}
@@ -79,7 +79,7 @@ const SignupScreen = () => {
       <button className="btn btn-primary mt-2" onClick={submitHandler}>Signup</button>
       <span className="mt-2">
         Already have an account?
-        <Link to="/" className="ml-1 bolder primary-text ">
+        <Link to="/login" className="ml-1 bolder primary-text ">
           Login here
         </Link>
       </span>
