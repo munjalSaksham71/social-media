@@ -53,3 +53,12 @@ export const deletePost = async (id) => {
     console.error(error.response);
   }
 };
+
+export const getPostById = async (id) => {
+  try {
+    const response = await axios.get(`/api/posts/${id}`)
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+}

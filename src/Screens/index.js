@@ -5,4 +5,4 @@ export { UserScreen } from "./UserScreen/UserScreen";
 export { BookmarksScreen } from "./BookmarksScreen/BookmarksScreen";
 export { UserProfileScreen } from "./UserProfileScreen/UserProfileScreen";
 export { UserProfileUpdate } from "./UserProfileUpdate/UserProfileUpdate";
-
+export { SinglePostScreen } from "./SinglePostScreen/SinglePostScreen";

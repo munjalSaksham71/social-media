@@ -1,10 +1,11 @@
 import "./ViewContent.css";
-import { AiOutlineLike, AiFillLike, BsBookmarks, BsFillBookmarksFill } from "../Icon";
+import { AiOutlineLike, AiFillLike, BsBookmarks, BsFillBookmarksFill, FaRegComment } from "../Icon";
 import { dislikePost, likePost } from "../../actions/likesAction";
 import jwt_decode from "jwt-decode";
 import { usePosts } from "../../context/posts-context";
 import { addToBookmark, removeFromBookmark } from "../../actions/bookmarkActions";
 import { useBookmarks } from "../../context/bookmark-context";
+import { Link } from "react-router-dom";
 
 const ViewContent = ({ posts }) => {
   const { postDispatch } = usePosts();
@@ -85,6 +86,9 @@ const ViewContent = ({ posts }) => {
                   />
                 )}
               </div>
+              <Link to={`/post/${post._id}`}>
+                <FaRegComment className="text-none icon ml-2" />
+              </Link>
             </div>
           </div>
         );

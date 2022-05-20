@@ -1,0 +1,29 @@
+.comments-chip {
+    background-color: var(--white);
+    margin: 2rem 1rem;
+    padding: 1rem;
+    width: 30rem
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.comment-btn {
+    margin-top: 4px;
+    margin-left: 1.5rem;
+}
+
+.post-container {
+    width: 60%;
+    align-items: center;
+    margin-left: 22rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .post-container {
+      width: 100%;
+      margin-top: 2rem;
+      margin-left: 0;
+    }
+}
