@@ -104,7 +104,8 @@ const SinglePostScreen = () => {
         </div>
         {/* Comment Section */}
         <div>
-          {comments.map((comment) => {
+          {!comments.length  && <div> No Comments </div>}
+          {comments?.map((comment) => {
             return (
               <div key={comment._id} className="comments-chip flex-column">
                 <div className="comment-username">
