@@ -2,6 +2,7 @@ import ProfileCard from "../../Components/ProfileCard/ProfileCard"
 import SideBar from "../../Components/SideBar/SideBar"
 import ViewContent from "../../Components/ViewContent/ViewContent"
 import { usePosts } from "../../context/posts-context";
+import './ExploreScreen.css'
 
 const ExploreScreen = () => {
     
@@ -15,7 +16,7 @@ const ExploreScreen = () => {
           <ProfileCard />
           <SideBar />
         </div>
-        <div className="flex-column main-content">
+        <div className="flex-column explore-posts">
             <ViewContent posts={renderposts} />
         </div>
         </div>

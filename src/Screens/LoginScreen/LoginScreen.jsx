@@ -44,7 +44,7 @@ const LoginScreen = () => {
           Username
         </label>
         <input
-          className="mt-1 p-1"
+          className="mt-1 p-1 field"
           type="text"
           placeholder="Enter your username"
           value={username}
@@ -54,7 +54,7 @@ const LoginScreen = () => {
           Password
         </label>
         <input
-          className="mt-1 p-1"
+          className="mt-1 p-1 field"
           type="password"
           placeholder="Enter your password"
           value={password}

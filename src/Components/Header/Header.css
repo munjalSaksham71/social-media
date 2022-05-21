@@ -43,6 +43,16 @@
     display: flex;    
 }
 
+.link {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 1000px) {
     .hamburger-menu {
         display: block;

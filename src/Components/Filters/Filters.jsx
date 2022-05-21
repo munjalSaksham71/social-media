@@ -1,5 +1,6 @@
 import Card from "../Card/Card";
 import { useFilters } from "../../context/filter-context";
+import './Filters.css'
 
 const Filters = () => {
   const {
@@ -10,7 +11,10 @@ const Filters = () => {
   return (
     <Card>
       <div className="flex-column">
+        <div className="flex-row">
         <div>FILTERS</div>
+        <button onClick={() => filterDispatch({type: 'CLEAR_FILTERS'})} className="clear-btn ml-auto mr-2">Clear</button>
+        </div>
         <hr className="mt-1 mb-1" />
         <div>Sort By Date </div>
         <div className="flex-row mt-1">

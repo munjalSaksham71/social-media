@@ -61,11 +61,18 @@ const ViewContent = ({ posts }) => {
       );
     }
 
+    if (!sortByDate && !sortByLatestPosts) {
+      filteredPosts = filteredPosts.sort((a,b) =>
+        a.createdAt.localeCompare(b.createdAt)
+      );
+    }
+
     if (sortByLatestPosts) {
       filteredPosts = filteredPosts.sort((a,b) =>
         b.createdAt.localeCompare(a.createdAt)
       );
     }
+
 
     if (sortByTrendingPost) {
       filteredPosts = filteredPosts.sort(

@@ -33,7 +33,7 @@ const Header = () => {
           {isUserLoggedIn ? (
             <div onClick={() => {logoutUser(); followDispatch({type: 'CLEAR_DATA'})  }}>Logout</div>
           ) : (
-            <Link to="/login"> Login </Link>
+            <Link className="link" to="/login"> Login </Link>
           )}
         </div>
       </div>

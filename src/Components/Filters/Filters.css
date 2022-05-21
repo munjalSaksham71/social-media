@@ -1,0 +1,10 @@
+.clear-btn {
+    padding: 6px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+}
+
+.clear-btn:hover {
+    cursor: pointer;
+}

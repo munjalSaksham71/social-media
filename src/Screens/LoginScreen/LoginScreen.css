@@ -27,6 +27,11 @@ input {
   border: 1px solid var(--text-primary);
 }
 
+.field {
+  background-color: var(--white);
+  border: none;
+}
+
 @media only screen and (max-width: 900px) {
 
   .login-button {
